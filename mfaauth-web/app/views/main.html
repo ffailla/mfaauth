@@ -1,11 +1,14 @@
-<div>
-  <label>MFA Key: </label>
-  <input type='text' ng-required='true' ng-model='mfakey'>
+<div class="row">
+  <div class="col-md-2">Key</div>
+  <div class="col-md-10">
+    <input type='text' ng-required='true' ng-model='mfakey'>
+  </div>
 </div>
-<div>
-  <label>MFA Code: </label>
-  <label ng-bind='mfacode'></label>
+<div class="row">
+  <div class="col-md-2">Code</div>
+  <div class="col-md-10" ng-bind='mfacode'></div>
 </div>
-<div>
-  <label ng-bind='counter'></label>
+<div class="row">
+  <div class="col-md-2">Counter</div>
+  <div class="col-md-10" ng-bind='counter'></div>
 </div>

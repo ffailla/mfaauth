@@ -24,7 +24,7 @@
   (croute/not-found "<p>Page not Found</p>"))
 
 (defn run-web
-  [key]
+  []
   (hs/run-server (chandler/site #'all-routes) {:port 8189}))
 
 (defn run-console
@@ -36,8 +36,10 @@
     (recur)))
 
 (defn -main
-  [key]
-  (run-web key))
+  [& args]
+  (if args
+    (run-console (first args))
+    (run-web)))
 
 (comment
 

@@ -7,12 +7,12 @@ angular.module('mfaauthWebApp')
                    
       $scope.mfakey = null;  
       $scope.mfacode = null;
-      $scope.counter = 30;             
+      $scope.counter = 30;
 
       $scope.countdown = function() {
           var c = --$scope.counter;
-          if(c<=0) {
-              $scope.counter = 30;
+          if(c<0) {
+              $scope.counter = 31;
               $scope.getcode();
           } else {
               $timeout($scope.countdown, 1000);
